@@ -1,5 +1,5 @@
 /*
-东东萌宠 更新地址： https://gitee.com/lxk0301/jd_scripts/raw/master/jd_pet.js
+东东萌宠 更新地址： https://github.com/a5753825/MyActions/raw/main/jd_pet.js
 更新时间：2021-01-19
 活动入口：京东APP我的-更多工具-东东萌宠
 已支持IOS双京东账号,Node.js支持N个京东账号
@@ -11,17 +11,17 @@
 =================================Quantumultx=========================
 [task_local]
 #东东萌宠
-15 6-18/6 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_pet.js, tag=东东萌宠, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdmc.png, enabled=true
+15 6-18/6 * * * https://github.com/a5753825/MyActions/raw/main/jd_pet.js, tag=东东萌宠, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdmc.png, enabled=true
 
 =================================Loon===================================
 [Script]
-cron "15 6-18/6 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_pet.js,tag=东东萌宠
+cron "15 6-18/6 * * *" script-path=https://github.com/a5753825/MyActions/raw/main/jd_pet.js,tag=东东萌宠
 
 ===================================Surge================================
-东东萌宠 = type=cron,cronexp="15 6-18/6 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_pet.js
+东东萌宠 = type=cron,cronexp="15 6-18/6 * * *",wake-system=1,timeout=3600,script-path=https://github.com/a5753825/MyActions/raw/main/jd_pet.js
 
 ====================================小火箭=============================
-东东萌宠 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_pet.js, cronexpr="15 6-18/6 * * *", timeout=3600, enable=true
+东东萌宠 = type=cron,script-path=https://github.com/a5753825/MyActions/raw/main/jd_pet.js, cronexpr="15 6-18/6 * * *", timeout=3600, enable=true
 
 */
 const $ = new Env('东东萌宠');
@@ -31,9 +31,9 @@ let cookiesArr = [], cookie = '', jdPetShareArr = [], isBox = false, notify, new
 //下面给出两个账号的填写示例（iOS只支持2个京东账号）
 let shareCodes = [ // IOS本地脚本用户这个列表填入你要助力的好友的shareCode
    //账号一的好友shareCode,不同好友的shareCode中间用@符号隔开
-  'MTE1NDQ5OTIwMDAwMDAwNDI2ODIwNTU=@MTE1NDQ5OTIwMDAwMDAwNDM2MzA1NDE=@MTE1NDQ5MzYwMDAwMDAwNDI2ODMyNzU=@MTE1NDAxNzgwMDAwMDAwNDI3MTM5Njc=@MTEzMzI0OTE0NTAwMDAwMDA0MjcxMzk4OQ==@MTE1NDUwMTI0MDAwMDAwMDQyODcyMDMx@MTE1NDUwMTI0MDAwMDAwMDQzMDA4Mzc1@MTE1NDQ5OTUwMDAwMDAwNDI3MTA5NTM=',
+  '',
   //账号二的好友shareCode,不同好友的shareCode中间用@符号隔开
-  'MTE1NDQ5OTIwMDAwMDAwNDI2ODIwNTU=@MTE1NDQ5OTIwMDAwMDAwNDM2MzA1NDE=@MTE1NDQ5MzYwMDAwMDAwNDI2ODMyNzU=@MTE1NDAxNzgwMDAwMDAwNDI3MTM5Njc=@MTEzMzI0OTE0NTAwMDAwMDA0MjcxMzk4OQ==@MTE1NDUwMTI0MDAwMDAwMDQyODcyMDMx@MTE1NDUwMTI0MDAwMDAwMDQzMDA4Mzc1@MTE1NDQ5OTUwMDAwMDAwNDI3MTA5NTM=',
+  '',
 ]
 let message = '', subTitle = '', option = {};
 let jdNotify = false;//是否关闭通知，false打开通知推送，true关闭通知推送
@@ -450,7 +450,7 @@ async function showMsg() {
 function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
-    $.get({url: "https://gitee.com/Soundantony/RandomShareCode/raw/master/JD_Pet.json",headers:{
+    $.get({url: "https://github.com/a5753825/RandomShareCode/raw/main/JD_Pet.json",headers:{
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
       }}, async (err, resp, data) => {
       try {
@@ -458,7 +458,7 @@ function readShareCode() {
           console.log(`${JSON.stringify(err)}`)
           console.log(`${$.name} API请求失败，将切换为备用API`)
           console.log(`随机取助力码放到您固定的互助码后面(不影响已有固定互助)`)
-          $.get({url: `https://raw.githubusercontent.com/shuyeshuye/RandomShareCode/main/JD_Pet.json`, 'timeout': 10000},(err, resp, data)=>{
+          $.get({url: `https://github.com/a5753825/RandomShareCode/raw/main/JD_Pet.json`, 'timeout': 10000},(err, resp, data)=>{
           data = JSON.parse(data);})
         } else {
           if (data) {
