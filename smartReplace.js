@@ -201,7 +201,7 @@ function batchReplace() {
 
 async function downloader_jd() {
     if (/require\(['"`]{1}.\/jdCookie.js['"`]{1}\)/.test(remoteContent))
-        await download("https://github.com/wuzhi01/MyActions/raw/main/jdCookie.js", "./jdCookie.js", "京东Cookies");
+        await download("https://github.com/a5753825/MyActions/raw/main/jdCookie.js", "./jdCookie.js", "京东Cookies");
     if (remoteContent.indexOf("jdFruitShareCodes") > 0) {
         await download(
             "https://github.com/a5753825/MyActions/raw/main/jdFruitShareCodes.js",
@@ -263,11 +263,11 @@ async function downloader_jd() {
 }
 
 async function downloader_notify() {
-    await download("https://github.com/wuzhi01/MyActions/raw/main/sendNotify.js", "./sendNotify.js", "统一通知");
+    await download("https://github.com/a5753825/MyActions/raw/main/sendNotify.js", "./sendNotify.js", "统一通知");
 }
 
 async function downloader_user_agents() {
-    await download("https://github.com/wuzhi01/MyActions/raw/main/USER_AGENTS.js", "./USER_AGENTS.js", "云端UA");
+    await download("https://github.com/a5753825/MyActions/raw/main/USER_AGENTS.js", "./USER_AGENTS.js", "云端UA");
 }
 
 async function download(url, path, target) {
