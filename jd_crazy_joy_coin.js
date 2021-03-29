@@ -3,7 +3,7 @@ crazy joy
 挂机领金币/宝箱专用
 活动入口：京东APP我的-更多工具-疯狂的JOY
 ⚠️建议云端使用。手机端不建议使用(会一直跑下去，永不停止)
-10 7 * * * https://github.com/a5753825/MyActions/raw/main/jd_crazy_joy_coin.js
+10 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_crazy_joy_coin.js
 
  */
 
