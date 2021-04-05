@@ -3,7 +3,7 @@ name: 京东疯狂JOY挂机(单次挂机测试)
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 6,12,18,24 * * *"
+        - cron: "0 7 * * *"
     watch:
         types: [started]
     repository_dispatch:
